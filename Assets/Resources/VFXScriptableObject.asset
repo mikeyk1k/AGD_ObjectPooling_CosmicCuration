@@ -12,13 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 869d97273f189b849afcb38505cbc2f8, type: 3}
   m_Name: VFXScriptableObject
   m_EditorClassIdentifier: 
-  vfxData:
-  - type: 0
-    prefab: {fileID: 4644628131305953936, guid: fc1917a33f075db42ac4799e0890012f,
-      type: 3}
-  - type: 1
-    prefab: {fileID: 1384023486567675888, guid: 16f7b7a0410644443a9aa76baaf2ff9e,
-      type: 3}
-  - type: 2
-    prefab: {fileID: 2223264487581005701, guid: 730e73862c9342c49bf899a7875ce48f,
-      type: 3}
+  vfxPrefab: {fileID: 2674352075565639642, guid: c68733eb7fedaae4299ec0fea2f96c42,
+    type: 3}

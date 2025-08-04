@@ -7,13 +7,13 @@ namespace CosmicCuration.VFX
     [CreateAssetMenu(fileName = "VFXScriptableObject", menuName = "ScriptableObjects/VFXScriptableObject")]
     public class VFXScriptableObject : ScriptableObject
     {
-        public List<VFXData> vfxData;
+        public VFXView vfxPrefab;
     }
 
     [Serializable]
     public class VFXData
     {
         public VFXType type;
-        public VFXView prefab;
+        public ParticleSystem particleSystem;
     }
 }

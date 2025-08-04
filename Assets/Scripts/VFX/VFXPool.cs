@@ -7,22 +7,11 @@ namespace CosmicCuration.VFX
 {
     public class VFXPool : GenericObjectPool<VFXController>
     {
-        private VFXView prefabToSpawn;
+        private VFXView vfxPrefab;
 
-        public VFXController GetVFX(VFXView vfxView)
-        {
-            this.prefabToSpawn = vfxView;
-            return GetItem<VFXController>();
-        }
-        protected override VFXController CreateItem<T>()
-        {
+        public VFXPool(VFXView vfxPrefab) => this.vfxPrefab = vfxPrefab;
 
-            if (typeof(T) == typeof(VFXController))
-            {
-                VFXController vfxToPlay = new VFXController(prefabToSpawn);
-                return vfxToPlay;
-            }
-            throw new System.Exception($"VFX Type not supported");
-        }
+        public VFXController GetVFX() => GetItem<VFXController>();
+        protected override VFXController CreateItem<T>() => new VFXController(vfxPrefab);
     }
 }
